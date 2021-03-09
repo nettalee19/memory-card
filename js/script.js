@@ -1,24 +1,4 @@
-// const btnStart = document.querySelector(".btn-start");
-// const start = document.querySelector(".start");
-// const input = document.querySelector(".input");
 
-
-// btnStart.addEventListener("click", () =>{
-//   start.remove()
-// })
-
-// const num = document.querySelector('.input').value
-// const game = document.querySelector(".game")
-
-// const cardsNum = num*2;
-// const cards = document.createElement(".div")
-
-// const cardArray =[
-// {
-//   name:"cat"
-//   img: ""
-// }
-// ]
 
 const cards = document.querySelectorAll(".memory-card");
 
@@ -86,3 +66,10 @@ function resetBoard(){
 })(); //executed right after it's definition 
 
 cards.forEach(card => card.addEventListener("click", flipCard));
+
+function runTimer() {
+  time++;
+  timer.innerHTML =`${parseInt(time/60)}: ${parseInt(time%60)}`;
+}
+
+let myVar = setInterval(runTimer, 1000);
